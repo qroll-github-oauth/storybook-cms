@@ -1,16 +1,20 @@
+{/** ---
+title: Button
+--- **/}
 import { Canvas, Meta } from "@storybook/blocks";
 
 import * as ButtonStories from "./Button.stories";
 
-<Meta of={ButtonStories} />
+<Meta title="Button" of={ButtonStories} />
 
 # Button
 
-A button is an interactive element that represents a call-to-action.
+A button is an interactive element that represents a **call-to-action**.
 
-<Canvas of={ButtonStories.Primary} />
-<Canvas of={ButtonStories.Secondary} />
+<Canvas name="Primary" of={ButtonStories.Primary}></Canvas>
+
+<Canvas name="Secondary" of={ButtonStories.Secondary}></Canvas>
 
 You can pass in custom children.
 
-<Canvas of={ButtonStories.CustomChildren} />
+<Canvas of={ButtonStories.CustomChildren}></Canvas>

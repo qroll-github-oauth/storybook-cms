@@ -1,0 +1,20 @@
+version: "3.2"
+services:
+  cms:
+    image: "itsmejoeeey/docker-decap-cms-standalone:latest"
+    ports:
+      - "8080:80"
+    environment:
+      - ORIGIN=http://localhost:8080
+      - OAUTH_CLIENT_ID=<client_id>
+      - OAUTH_CLIENT_SECRET=<client_secret>
+    volumes:
+      - type: bind
+        source: ./decap-config.yml
+        target: /app/config.yml
+      - type: bind
+        source: ./index.html
+        target: /app/netlify-cms/public/index.html
+      - type: bind
+        source: ./preview.css
+        target: /app/netlify-cms/public/preview.css
