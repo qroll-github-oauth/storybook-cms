@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -9,6 +13,6 @@
     "**/*.tsx",
     "**/**/*.ts",
     "**/**/*.tsx"
-  ],
+, "src/stories/Button.stories.mdx"  ],
   "exclude": ["node_modules"]
 }

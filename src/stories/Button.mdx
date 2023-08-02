@@ -1,0 +1,16 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button is an interactive element that represents a call-to-action.
+
+<Canvas of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Secondary} />
+
+You can pass in custom children.
+
+<Canvas of={ButtonStories.CustomChildren} />

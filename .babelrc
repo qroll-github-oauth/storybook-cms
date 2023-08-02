@@ -7,6 +7,18 @@
         "runtime": "automatic"
       }
     ],
-    "@babel/preset-typescript"
+    "@babel/preset-typescript",
+    "@linaria/babel-preset"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@": "src"
+        }
+      }
+    ]
   ]
 }
