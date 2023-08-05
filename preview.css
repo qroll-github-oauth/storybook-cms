@@ -1,22 +1,12 @@
-story,
-Canvas {
-  display: block;
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 64px;
   width: calc(100% - 32px);
   background-color: #eee;
   border-radius: 3px;
   margin: 16px 0;
-}
-
-story:before,
-Canvas:before {
-  content: attr(name) ' story';
-  text-align: center;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 
 meta {
