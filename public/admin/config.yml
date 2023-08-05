@@ -3,12 +3,14 @@ local_backend: true
 backend:
   name: git-gateway
 
-media_folder: "src/stories/assets" # Media files will be stored in the repo under public/
-public_folder: "src/stories/assets" # The src attribute for uploaded media will begin with /
+media_folder: "public/assets" # Media files will be stored in the repo under public/
+public_folder: "public/assets" # The src attribute for uploaded media will begin with /
 
 collections:
-  - name: "docs" # Used in routes, e.g., /admin/collections/docs
-    label: "Docs" # Used in the UI
+  - name: "stories" # Used in routes, e.g., /admin/collections/docs
+    label: "Stories" # Used in the UI
+    label_singular: "Story"
+    path: "src/stories/{{component}}/{{slug}}"
     folder: "src/stories" # The path to the folder where the mdx documents are stored
     create: true # Allow users to create new documents in this collection
     extension: mdx
@@ -16,5 +18,5 @@ collections:
     format: yaml-frontmatter
     frontmatter_delimiter: ["{/** ---", "--- **/}"]
     fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "File", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
