@@ -14,7 +14,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     folder: "src/stories" # The path to the folder where the mdx documents are stored
     nested: { depth: 100 }
-    meta: { path: { widget: string, label: "Path", index_file: "{{title}}" } }
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
     extension: mdx
     format: yaml-frontmatter
     frontmatter_delimiter: ["{/** ---", "--- **/}"]
