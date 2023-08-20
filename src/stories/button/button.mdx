@@ -1,0 +1,43 @@
+{/** ---
+title: Button
+--- **/}
+import { Canvas, Meta } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+import { PropsTable } from "./props-table";
+
+<Meta title="Button" of={ButtonStories} />
+
+# Button
+
+A button is an interactive element that represents a **call-to-action**.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisl euismod, viverra turpis vitae, tempus arcu. Nullam et magna quam. Aenean convallis sit amet eros id rhoncus. Nullam auctor, nisi non vehicula luctus, nibh urna rutrum diam, eu feugiat augue nulla et felis. Fusce interdum, orci at viverra placerat, nisl velit efficitur est, nec sagittis ante turpis fermentum turpis. Mauris et elit ac ligula ullamcorper malesuada. Phasellus ut hendrerit dolor, eu faucibus velit.
+
+```
+import Button from "src/button";
+```
+
+## Variations
+
+The Button comes with 2 styles configured via the `styleProp`:
+
+* Primary
+* Secondary
+
+<Canvas of={ButtonStories.Primary} />
+
+<Canvas of={ButtonStories.Secondary} />
+
+You can pass in custom children.
+
+> **Note**: This is an info box
+
+<Canvas of={ButtonStories.CustomChildren} />
+
+<Canvas />
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisl euismod, viverra turpis vitae, tempus arcu. Nullam et magna quam. Aenean convallis sit amet eros id rhoncus. Nullam auctor, nisi non vehicula luctus, nibh urna rutrum diam, eu feugiat augue nulla et felis. Fusce interdum, orci at viverra placerat, nisl velit efficitur est, nec sagittis ante turpis fermentum turpis. Mauris et elit ac ligula ullamcorper malesuada. Phasellus ut hendrerit dolor, eu faucibus velit.
+
+## Component API
+
+<PropsTable />

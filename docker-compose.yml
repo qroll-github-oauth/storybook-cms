@@ -6,15 +6,21 @@ services:
       - "8080:80"
     environment:
       - ORIGIN=http://localhost:8080
-      - OAUTH_CLIENT_ID=<client_id>
-      - OAUTH_CLIENT_SECRET=<client_secret>
+      - OAUTH_CLIENT_ID=0aca2b31d95bf647006a
+      - OAUTH_CLIENT_SECRET=b8cffb348e5ed2c74a24eaa397ec7948fa4bda81
     volumes:
       - type: bind
-        source: ./decap-config.yml
+        source: ./public/admin/config.yml
         target: /app/config.yml
       - type: bind
-        source: ./index.html
-        target: /app/netlify-cms/public/index.html
+        source: ./public/admin/index.html
+        target: /app/netlify-cms/public/admin/index.html
       - type: bind
-        source: ./preview.css
-        target: /app/netlify-cms/public/preview.css
+        source: ./public/admin/preview.css
+        target: /app/netlify-cms/public/admin/preview.css
+      - type: bind
+        source: ./public/admin/cms.css
+        target: /app/netlify-cms/public/admin/cms.css
+      - type: bind
+        source: ./public/admin/cms.js
+        target: /app/netlify-cms/public/admin/cms.js

@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+
+media_folder: "public/assets" # Media files will be stored in the repo under public/
+public_folder: "public/assets" # The src attribute for uploaded media will begin with /
+
+collections:
+  - name: "stories" # Used in routes, e.g., /admin/collections/docs
+    label: "Stories" # Used in the UI
+    label_singular: "Story"
+    create: true # Allow users to create new documents in this collection
+    folder: "src/stories" # The path to the folder where the mdx documents are stored
+    nested: { depth: 100 }
+    meta: { path: { widget: string, label: "Path", index_file: "{{title}}" } }
+    extension: mdx
+    format: yaml-frontmatter
+    frontmatter_delimiter: ["{/** ---", "--- **/}"]
+    fields: # The fields for each document, usually in front matter
+      - { label: "File", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

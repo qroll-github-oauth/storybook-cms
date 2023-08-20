@@ -1,0 +1,28 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@linaria/babel-preset": "^4.5.4",
+    "@linaria/core": "^4.5.4",
+    "@linaria/react": "^4.5.4",
+    "netlify-cms-app": "^2.15.72"
+  },
+  "devDependencies": {
+    "@linaria/rollup": "^4.5.4",
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "rollup": "^3.27.2",
+    "rollup-plugin-css-only": "^4.3.0",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  }
+}
